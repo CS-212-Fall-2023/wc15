@@ -1,0 +1,43 @@
+\documentclass[a4paper]{exam}
+
+\usepackage{amsmath,amssymb, amsthm}
+\usepackage[a4paper]{geometry}
+\usepackage{hyperref}
+
+\theoremstyle{theorem}
+\newtheorem{theorem}{Theorem}
+
+\theoremstyle{claim}
+\newtheorem{claim}{Claim}
+
+\printanswers
+
+\qformat{{\large\bf \thequestion. \thequestiontitle}\hfill}
+\boxedpoints
+
+\title{Weekly Challenge 15: Complexity Classes}
+\author{CS 212 Nature of Computation\\Habib University}
+\date{Fall 2023}
+
+\begin{document}
+\maketitle
+
+\begin{questions}
+
+\titledquestion{Checking Primality}
+
+  Explain succinctly why the language recognized by the following Turing machine, $M$, does not belong to P. Assume the input to be a binary representation of a number.
+  
+  $M$ = On input $n$:
+  \begin{enumerate}
+  \item Check if $2$ divides $n$, if so \textit{reject}.
+  \item Repeat Step 1 for all numbers less than $n$. That is, check if $3$ divides $n$. If so \textit{reject}, otherwise check if $4$ divides $n$, if so \textit{reject}, and so on.
+  \item If all numbers less than $n$ have been checked, \textit{accept}.
+  \end{enumerate}
+\end{questions}
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
